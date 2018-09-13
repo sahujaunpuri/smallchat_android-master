@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/emotionlayout"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/emotion_grid_height"
+    android:gravity="bottom"
+    android:visibility="gone" 
+    android:background="@color/backgroud_color">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/imagepager"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/page_relativelayout" />
+
+    <RelativeLayout
+        android:id="@+id/page_relativelayout"
+        android:layout_width="fill_parent"
+        android:layout_height="15dip"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp" >
+
+        <LinearLayout
+            android:id="@+id/circlelayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal" >
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

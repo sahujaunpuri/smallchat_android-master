@@ -1,0 +1,793 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="net.smallchat.im">
+
+
+ 	<uses-sdk android:minSdkVersion="11" />
+ 	
+    <application
+        android:name="net.smallchat.im.global.ChatApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/chat_app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".WelcomeActivity"
+            android:configChanges="locale|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ResetPasswordActivity"
+            android:configChanges="locale|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:configChanges="locale|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".RegisterActivity"
+            android:configChanges="locale|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".UserProtocolActivity"
+            android:configChanges="locale|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mine.CompleteUserInfoActvity"
+            android:configChanges="locale|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mine.WriteUserInfoActivity"
+            android:configChanges="locale|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateUnchanged" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity> <!-- .SmallVideoRecorderActivity  android:theme="@style/ActivityTheme_Light" -->
+        <activity
+            android:name="MainActivity"
+            android:clearTaskOnLaunch="true"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:stateNotNeeded="true"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mine.MyGroupListActivity"
+            android:configChanges="locale|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateUnchanged" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mine.SettingTab"
+            android:configChanges="locale|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateUnchanged" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".scan.CaptureActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".components.LocationActivity"
+            android:configChanges="locale|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateUnchanged" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".contact.UserInfoActivity"
+            android:configChanges="locale|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateUnchanged" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".chat.ChatMainActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait"
+            android:taskAffinity="net.smallchat.im.chat"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".components.RotateImageActivity"
+            android:configChanges="locale|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateUnchanged" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".components.ShowImageActivity"
+            android:configChanges="locale|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateUnchanged" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".contact.ChooseUserActivity"
+            android:configChanges="locale|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".about.AboutActivity"
+            android:configChanges="locale|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".HelpWebViewActivity"
+            android:configChanges="locale|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".about.FeedBackActivity"
+            android:configChanges="locale|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".contact.RemarkActivity"
+            android:configChanges="locale|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".about.ReportActivity"
+            android:configChanges="locale|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".contact.BlockListActivity"
+            android:configChanges="locale|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mine.EditProfileActivity"
+            android:configChanges="locale|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".contact.AddActivity"
+            android:configChanges="locale|orientation"
+            android:icon="@drawable/logo"
+            android:label="@string/add_friend"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".contact.AddPersonActivity"
+            android:configChanges="locale|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".chat.GroupChatDetailActivity"
+            android:configChanges="locale|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".GuideActivity"
+            android:configChanges="locale|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".album.MyAlbumActivity"
+            android:configChanges="locale|orientation"
+            android:label="@string/my_album"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MusicActivity"
+            android:configChanges="locale|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".search.SearchActivity"
+            android:configChanges="locale|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".contact.ContactActivity"
+            android:configChanges="locale|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".friendcircle.SendFriendCircleActivity"
+            android:configChanges="locale|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".room.GroupCodeActivity"
+            android:configChanges="locale|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mine.MyFavoriteActivity"
+            android:configChanges="locale|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mine.PrivacySettingActivity"
+            android:configChanges="locale|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mine.ModifyPwdActivity"
+            android:configChanges="locale|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".components.TreeViewActivity"
+            android:configChanges="locale|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".contact.InviteActivity"
+            android:configChanges="locale|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".search.SearchResultActivity"
+            android:configChanges="locale|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".contact.NewFriendsActivity"
+            android:configChanges="locale|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".contact.CardUserDetailActivity"
+            android:configChanges="locale|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".room.RoomDetailActivity"
+            android:configChanges="locale|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".friendcircle.FriendCircleActivity"
+            android:configChanges="locale|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".components.ShowMultiImageActivity"
+            android:configChanges="locale|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".friendcircle.FriendCircleDetailActivity"
+            android:configChanges="locale|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateUnchanged|adjustResize" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".components.AreaActivity"
+            android:configChanges="locale|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".friendcircle.ShowMultiImageActivity"
+            android:configChanges="locale|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".album.AlbumCommentActivity"
+            android:configChanges="locale|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".favorite.FavoriteDetailActivity"
+            android:configChanges="locale|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mine.MyMovingMessageListActivity"
+            android:configChanges="locale|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".room.JoinRoomDetailActivity"
+            android:configChanges="locale|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".friendcircle.SetFriendCircleAuthActivity"
+            android:configChanges="locale|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".meeting.MettingActivity"
+            android:configChanges="locale|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".meeting.ApplyMettingActivity"
+            android:configChanges="locale|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateUnspecified|adjustPan" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".meeting.MettingDetailActivity"
+            android:configChanges="locale|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateUnspecified|adjustPan" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".meeting.ManagerMeetingActivity"
+            android:configChanges="locale|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".meeting.ApplyMetListActivity"
+            android:configChanges="locale|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateUnspecified" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name="net.smallchat.im.scan.AddFriendDetailActivity"
+            android:configChanges="locale|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
+       
+
+        <activity
+            android:name=".ShowMultiImageActivity"
+            android:configChanges="locale|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ShowChatMultiImageActivity"
+            android:configChanges="locale|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateUnchanged|adjustResize" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".FilePreviewActivity"
+            android:configChanges="locale|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateUnspecified" />
+        <!--个人二维码名片-->
+        <activity
+            android:name=".mine.PersonalQRCodeActivity"
+            android:configChanges="locale|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!--仿微信图片选择-->
+        <activity
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:name=".components.multi_image_selector.MultiImageSelectorActivity" />
+
+        <activity
+            android:name=".MiniBrowserActivity"
+            android:configChanges="locale|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateUnspecified" />
+
+        <activity
+            android:name=".smallvideo.PlayVideoActivity"
+            android:configChanges="locale|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateUnspecified"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            />
+        <activity
+            android:name=".FindPasswordActivity"
+            android:configChanges="locale|orientation"
+            android:label="@string/chat_app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
+        <!--支付与钱包activity-->
+
+        <activity
+            android:name=".mine.BankCardActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name=".mine.AddCardActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+
+        <activity
+            android:name=".mine.WalletActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name=".mine.PayActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name=".mine.PayResultActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name=".mine.PayDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name=".mine.MoneyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+
+
+
+        <service
+            android:name="net.smallchat.im.service.IMService"
+            android:label="SnsService"
+            android:process=":push" >
+        </service>
+
+        <!-- 百度地图AK -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="ZmpTtSGCDh9H0CfXdhKvrd9bDzbcDphB" >
+        </meta-data>
+        <service android:name="com.baidu.location.f" android:enabled="true" android:process=":remote"> </service>
+
+        <!-- debug.keysotre -->
+        <!--
+             <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyC3CJOGhd18ziwNylWBMuXy3Z7sh88Qg7U" />
+        -->
+
+
+        <!-- ochat.keysotre -->
+        <!--
+             <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyDkmwrGh5hdxRJJAT7nQ9CitFy0YsJQ9XA" />
+        -->
+        <!-- <uses-library android:required="false" android:name="com.google.android.maps.v2" /> -->
+
+
+    </application>
+
+    <permission
+        android:name="net.smallchat.im.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="net.smallchat.im.permission.MAPS_RECEIVE" />
+
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+
+
+
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+
+    <!-- 获取系统联系人 -->
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_SETTINGS" />
+    <!-- 摇一摇需要的权限 -->
+    <uses-permission android:name="android.hardware.sensor.accelerometer" />
+
+    
+    <!-- 允许程序打开网络sockets -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 允许程序访问有关的网络信息 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 允许程序访问Wi-Fi网络状态信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 允许应用写（非读）用户的外部存储器 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 允许读取电话的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 允许一个程序获取信息有关当前或最近运行的任务，一个缩略的任务状态，是否活动等等 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!-- 允许程序录制音频 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- 允许应用程序修改全局声音设置的权限 -->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <!-- 允许使用PowerManager的WakeLocks保持进程在休眠时从屏幕消失 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <!-- 允许请求访问使用照相设备 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    
+   
+    <!--  允许程序连接到已配对的蓝牙设备(非必选,由应用选择是否需要) -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+     <!-- 允许程序发现和配对蓝牙设备(非必选,由应用选择是否需要)-->
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <!-- GPS定位权限(非必选，由应用选择是否需要) -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <!-- 允许一个程序访问CellID或WiFi热点来获取粗略的位置 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 允许一个程序访问精良位置(如GPS) -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 允许程序读取用户联系人数据(非必选，由应用选择是否需要) -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!-- 允许访问振动设备(非必选,由应用选择是否需要) -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- 允许程序禁用键盘锁(非必选,由应用选择是否需要) -->
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+    <!-- 允许程序屏幕波或和更多常规的访问帧缓冲数据 -->
+    <!-- uses-permission android:name="android.permission.READ_FRAME_BUFFER" -->
+
+</manifest>

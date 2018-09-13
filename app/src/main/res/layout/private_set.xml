@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/titlelayout"
+        layout="@layout/title_layout" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/titlelayout"
+        android:layout_marginTop="10dip"
+        android:paddingBottom="10dip"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/first_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:visibility="gone" >
+
+                <RelativeLayout
+                    android:id="@+id/recharge_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dip"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dip" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/tglloop"
+                        android:text="加我为朋友时需要验证"
+                        android:textColor="@color/application_black"
+                        android:textSize="@dimen/setting_text_size" />
+
+                    <ToggleButton
+                        android:id="@+id/tglloop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dip"
+                        android:background="@drawable/selector_butn_toggle"
+                        android:text=""
+                        android:textOff=""
+                        android:textOn="" />
+                </RelativeLayout>
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/splite"
+                    android:contentDescription="@string/desc"/>
+                
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dip"
+                    android:background="@null"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dip"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/tgl_repy_add_friend"
+                        android:text="回复即添加对方为朋友"
+                        android:textColor="@color/application_black"
+                        android:textSize="@dimen/setting_text_size" />
+
+                    <ToggleButton
+                        android:id="@+id/tgl_repy_add_friend"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dip"
+                        android:background="@drawable/selector_butn_toggle"
+                        android:text=""
+                        android:textOff=""
+                        android:textOn="" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/recommend_contact_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="45dip"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="10dip"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="10dip"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/tgl_recommend_friend"
+                    android:text="向我推荐通讯录朋友"
+                    android:textColor="@color/application_black"
+                    android:textSize="@dimen/sixteen" />
+
+                <ToggleButton
+                    android:id="@+id/tgl_recommend_friend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dip"
+                    android:background="@drawable/selector_butn_toggle"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn="" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/accept_new_msg_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="45dip"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="10dip"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="10dip"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/tgl_accept_new_msg"
+                    android:text="接受新消息通知"
+                    android:textColor="@color/application_black"
+                    android:textSize="@dimen/sixteen" />
+
+                <ToggleButton
+                    android:id="@+id/tgl_accept_new_msg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dip"
+                    android:background="@drawable/selector_butn_toggle"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn="" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/voice_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="45dip"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="15dip"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="10dip"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/tgl_voice"
+                    android:text="声音"
+                    android:textColor="@color/application_black"
+                    android:textSize="@dimen/sixteen" />
+
+                <ToggleButton
+                    android:id="@+id/tgl_voice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dip"
+                    android:background="@drawable/selector_butn_toggle"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn="" />
+            </RelativeLayout>
+            <ImageView 
+                android:id="@+id/shake_img"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/desc"
+                android:background="@drawable/splite"
+                android:visibility="gone"/>
+            <RelativeLayout
+                android:id="@+id/shake_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="45dip"
+                android:layout_gravity="center_vertical"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="10dip"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/tgl_shake"
+                    android:text="震动"
+                    android:textColor="@color/application_black"
+                    android:textSize="@dimen/sixteen" />
+
+                <ToggleButton
+                    android:id="@+id/tgl_shake"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dip"
+                    android:background="@drawable/selector_butn_toggle"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn="" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

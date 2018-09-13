@@ -1,0 +1,46 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="title_bar">45dp</dimen>
+    <dimen name="refresh_listview_margin_top">-45dp</dimen>
+    <dimen name="menu_bar_height">53dp</dimen>
+    <dimen name="title_text_size">20sp</dimen>
+    <dimen name="login_username_text_size">14sp</dimen>
+    <dimen name="menu_text_size">11dp</dimen>
+    <dimen name="setting_text_size">14sp</dimen>
+    <dimen name="setting_dialog_text_size">14sp</dimen>
+    <dimen name="settting_item_height">40dp</dimen>
+    <dimen name="settting_new_item_height">40dp</dimen>
+    <dimen name="title_button_text_size">14sp</dimen>
+    <dimen name="chat_user_name_text_size">14sp</dimen>
+    <dimen name="chat_content_text_size">12sp</dimen>
+    <dimen name="chat_time_text_size">12sp</dimen>
+    <dimen name="text_size">14sp</dimen>
+    <dimen name="pl_emoji">22dp</dimen>
+    <!--    <dimen name="emotion_grid_height">220dp</dimen> -->
+    <dimen name="voice_max_length">180dp</dimen>
+    <dimen name="voice_min_length">80dp</dimen>
+    <dimen name="twelve">12dip</dimen>
+    <dimen name="listview_header_size">40dp</dimen>
+    <dimen name="weibo_content_content">16dip</dimen>
+    <dimen name="forteen">14dip</dimen>
+	<dimen name="sixteen">12sp</dimen>
+	<dimen name="eight">12sp</dimen>
+	<dimen name="nineteen">19sp</dimen>
+	<dimen name="sevent">17sp</dimen>
+    <dimen name="test_size">185dip</dimen>
+
+
+    <dimen name="mis_space_size">2dp</dimen>
+    <dimen name="mis_folder_cover_size">72dp</dimen>
+
+
+    <dimen name="list_margin">20dip</dimen>
+    <dimen name="list_margin_h">16dip</dimen>
+    <dimen name="list_space_v">10dip</dimen>
+
+
+    <dimen name="emotion_grid_height">180dip</dimen>
+    <dimen name="cover_album_height">250dip</dimen>
+    <dimen name="height_top_bar">48dp</dimen>
+</resources>

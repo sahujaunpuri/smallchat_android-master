@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/list_selector"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/grouplayout"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:background="@drawable/contact_item_title_bg" >
+
+        <TextView
+            android:id="@+id/sortKey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dp"
+            android:textColor="#e5e5e5"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:contentDescription="@string/desc"
+            android:src="@drawable/contact_item_arrow" />
+    </RelativeLayout>
+
+    <net.smallchat.im.widget.MyListView
+        android:id="@+id/user_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/backgroud_color"
+        android:cacheColorHint="@null"
+        android:divider="@drawable/order_devider_line"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="true"
+        android:focusable="true"
+        android:listSelector="@drawable/list_selector"
+        android:scrollbars="none" >
+    </net.smallchat.im.widget.MyListView>
+
+</LinearLayout>

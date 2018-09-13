@@ -1,0 +1,310 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+
+
+    -->
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="android:Theme.Light">
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+ <!-- 设置没有标题 -->
+        <!-- <item name="android:background">@color/backgroud_color</item> -->
+        <!--
+          <item name="android:textSize">20sp</item>   设置文本大小
+          <item name="android:textColor">#F34141</item>
+        -->
+        <!-- 设置activity切换动画 -->
+        <!-- <item name="android:windowAnimationStyle">@style/activityAnimation</item> -->
+        <item name="android:windowBackground">@color/backgroud_color</item>
+        <!-- android:configChanges="locale|orientation" -->
+     <!--    <item name="android:configChanges">locale|orientation</item>
+         =""
+        <item name="android:screenOrientation">portrait</item> -->
+    </style>
+
+    <!-- Application theme. -->
+    <!-- style name以及它所继承的系统Theme主题 -->
+   
+    <!-- @android:style/Theme.Holo.Light -->
+
+
+    <!-- animation 样式 -->
+
+
+    <!--      自定义窗口样式，需要带ActionBar
+       <style name="ActivityTheme_Light" parent="android:Theme.Holo.Light">
+           <item name="android:actionBarStyle">@style/actionbar_def_style</item>
+       </style> -->
+
+    <!-- 自定义ActionBar样式，重设ActionBar背景，隐藏actionbar左侧的应用图标和标题 -->
+
+    <style name="main_page_icon_style">
+        <item name="android:layout_width">55dip</item>
+        <item name="android:layout_height">55dip</item>
+    </style>
+
+    <style name="ContentOverlay" parent="android:style/Theme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@color/search_dialog_bg</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <!--
+    <style name="mypopwindow_anim_style">
+        <item name="android:windowEnterAnimation">@anim/show_anim</item>
+ 		指定显示的动画xml
+
+        <item name="android:windowExitAnimation">@anim/hide_anim</item>
+ 		指定消失的动画xml
+
+    </style>
+
+    -->
+
+    <style name="DialogPrompt" >
+        <item name="android:windowFrame">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@color/transparent</item>
+    </style>
+
+    <style name="chat_talk_style_txt_time">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/chat_time_bg</item>
+    </style>
+
+    <style name="chat_talk_style_txt_img_head">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:contentDescription">@string/desc</item>
+    </style>
+
+    <style name="chat_talk_style_txt_msg_info">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="chat_talk_style_txt_msg_info_msg_voice">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:maxHeight">50dp</item>
+        <item name="android:minWidth">@dimen/voice_min_length</item>
+        <item name="android:maxWidth">@dimen/voice_max_length</item>
+        <item name="android:gravity">left</item>
+        <item name="android:src">@drawable/rvoice3</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <style name="chat_talk_style_txt_msg_info_msg_right_voice">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:maxHeight">50dp</item>
+        <item name="android:gravity">right</item>
+        <item name="android:minWidth">@dimen/voice_min_length</item>
+        <item name="android:maxWidth">@dimen/voice_max_length</item>
+        <item name="android:src">@drawable/lvoice3</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <style name="chat_talk_style_txt_msg_info_msg_photo">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:visibility">visible</item>
+    </style>
+
+    <style name="chat_talk_style_txt_msg_info_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxWidth">180dp</item>
+        <item name="android:textColor">@color/font_color</item>
+        <item name="android:textSize">@dimen/text_size</item>
+        <item name="android:gravity">center_vertical|left</item>
+        <item name="android:minWidth">40dp</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <style name="chat_talk_style_txt_msg_info_right_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxWidth">180dp</item>
+        <item name="android:textColor">@color/chat_username_text_color</item>
+        <item name="android:textSize">@dimen/text_size</item>
+        <item name="android:gravity">center_vertical|left</item>
+        <item name="android:minWidth">40dp</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <!--
+         android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+    -->
+
+    <style name="DataSheetAnimation" parent="@android:style/Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/push_up_in</item>
+        <item name="android:windowExitAnimation">@anim/push_up_out</item>
+    </style>
+
+    <style name="MMThem_DataSheet" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowAnimationStyle">@style/DataSheetAnimation</item>
+    </style>
+
+    <style name="listview_header_style">
+        <item name="android:layout_height">@dimen/listview_header_size</item>
+        <item name="android:layout_width">@dimen/listview_header_size</item>
+        <item name="android:contentDescription">@string/desc</item>
+    </style>
+
+    <style name="MMLineActionButton" parent="@style/MMLineButton">
+        <item name="android:background">@drawable/blue_bg</item>
+        <item name="android:textColor">@color/mm_style_one_btn_text</item>
+        <item name="android:shadowColor">#000000</item>
+        <item name="android:shadowDy">1.2</item>
+        <item name="android:shadowDx">1.2</item>
+        <item name="android:shadowRadius">1</item>
+    </style>
+
+    <style name="MMLineButton" parent="@style/MMButton">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/mm_style_two_btn_text</item>
+    </style>
+    <!--
+    <style name="MMLineButton" parent="@style/MMButton">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/mm_style_two_btn_text</item>
+    </style>
+
+    -->
+    <style name="MMButton">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/mm_btn_text</item>
+        <item name="android:background">@null</item>
+        <item name="android:minHeight">40dp</item>
+        <item name="android:minWidth">40dp</item>
+    </style>
+
+    <style name="MyDialog" parent="@style/DialogPrompt"></style>
+
+    <style name="PLButton5" parent="@style/PLButtonThree">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">38.0dp</item>
+    </style>
+
+    <style name="PLButtonThree" parent="@style/PLButton">
+        <item name="android:background">@drawable/btn_four</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_width">100.0dp</item>
+        <item name="android:layout_height">30.0dp</item>
+    </style>
+
+    <style name="PLButton">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">120dp</item>
+        <item name="android:layout_height">38.0dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <!-- 自定义progressDialog -->
+    <!-- 设置progressDialog 的背景透明 -->
+
+    <style name="loading_dialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@drawable/loading_bg</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <!-- 右上角弹出款动画 -->
+    <style name="mystyle" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/head_in</item>
+        <item name="android:windowExitAnimation">@anim/head_out</item>
+    </style>
+
+
+    <style name="chat_talk_style_select">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:contentDescription">@string/desc</item>
+    </style>
+
+
+    <style name="chat_talk_style_txt_img_file_icon">
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:contentDescription">@string/desc</item>
+    </style>
+    <style name="MIS_NO_ACTIONBAR"></style>
+
+    <style name="PopupAnimation" parent="android:Animation" mce_bogus="1">
+        <item name="android:windowEnterAnimation">@anim/anim_popmenu_show</item>
+        <item name="android:windowExitAnimation">@anim/anim_popmenu_hide</item>
+    </style>
+
+
+
+
+    <style name="Widget.SeekBar.Normal" parent="@android:style/Widget.SeekBar">
+        <item name="android:maxHeight">2.5dip</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:screenOrientation">portrait</item>
+        <item name="android:indeterminateDrawable">
+            @android:drawable/progress_indeterminate_horizontal
+        </item>
+        <item name="android:progressDrawable">@drawable/small_video_seekbar</item>
+        <item name="android:minHeight">2.5dip</item>
+        <item name="android:thumb">@drawable/small_video_seekbar_thumb</item>
+        <item name="android:thumbOffset">1.0dip</item>
+
+    </style>
+
+</resources>

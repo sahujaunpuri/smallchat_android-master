@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud_color"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/title_layout"
+        layout="@layout/title_layout" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/search_list"
+        android:layout_below="@+id/title_layout"
+        android:background="@drawable/setting_corners_bg" >
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/bmapView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:clickable="true" />
+
+        <ImageView
+            android:id="@+id/map_mark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingBottom="30dip"
+            android:src="@drawable/icon_markf_h"
+            android:contentDescription="@string/desc"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@id/search_list"
+        android:layout_width="fill_parent"
+        android:layout_height="250dip"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:divider="@color/application_gray"
+        android:dividerHeight="0.5dip"
+        android:choiceMode="singleChoice"
+        android:fadingEdge="none"
+        android:scrollbars="none"
+        android:visibility="gone" />
+
+</RelativeLayout>

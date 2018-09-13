@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_item_copy"
+        android:title="@string/context_menu_copy"></item>
+    <item
+        android:id="@+id/menu_item_forward"
+        android:title="@string/context_menu_forward"></item>
+    <item
+        android:id="@+id/menu_item_favorite"
+        android:title="@string/context_menu_favorite"></item>
+    <item
+        android:id="@+id/menu_item_revoke"
+        android:title="@string/context_menu_revoke"></item>
+    <item
+        android:id="@+id/menu_item_delete"
+        android:title="@string/context_menu_delete"></item>
+    <item
+        android:id="@+id/menu_item_more"
+        android:title="@string/context_menu_more"></item>
+</menu>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F7F7"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/title_layout"
+        layout="@layout/title_layout" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fadingEdge="none"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="180dip"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/headerlayout"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="5dip">
+
+                    <ImageView
+                        android:id="@+id/header"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:contentDescription="@string/desc"
+                        android:src="@drawable/contact_default_header" />
+
+                    <LinearLayout
+                        android:id="@+id/group_header"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/room_header_bg"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="2dp" >
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/group_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="组名"
+                    android:textColor="@color/application_black"
+                    android:textSize="@dimen/sixteen" />
+
+                <TextView
+                    android:id="@+id/group_contact_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="(共3人)"
+                    android:textColor="@color/application_gray_black"
+                    android:textSize="@dimen/sixteen" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#C2C2C2"
+                android:contentDescription="@string/desc" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="40dip"
+                android:layout_marginTop="40dip"
+                android:text="@string/confirm_join_room"
+                android:textColor="@color/application_black"
+                android:textSize="@dimen/sixteen" />
+
+            <Button
+                android:id="@+id/join_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="43dip"
+                android:layout_marginBottom="20dip"
+                android:layout_marginLeft="35dip"
+                android:layout_marginRight="35dip"
+                android:layout_marginTop="20dip"
+                android:background="@drawable/red_btn"
+                android:text="@string/join_romm"
+                android:textColor="@color/white"
+                android:textSize="@dimen/eight" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

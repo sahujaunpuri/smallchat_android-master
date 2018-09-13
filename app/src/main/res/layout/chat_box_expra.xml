@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/chat_box_layout_expra"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:visibility="gone"
+
+    >
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="0dp"
+        android:layout_marginTop="5dp" />
+
+    <net.smallchat.im.components.slidepager.indicator.CirclePageIndicator
+        android:id="@+id/indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="5dp"
+        android:padding="3dp"
+        android:visibility="gone"
+        app:fillColor="#00acff"
+        app:pageColor="#32000000"
+        app:strokeWidth="0dp" />
+</FrameLayout>

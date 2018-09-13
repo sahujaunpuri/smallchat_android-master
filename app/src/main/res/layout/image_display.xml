@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?><!--  xmlns:shadow="http://shadow.com" -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/imagelayout"
+    android:orientation="vertical" >
+    
+    <net.smallchat.im.widget.FlowView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/desc"
+        android:id="@+id/imageview"
+    />
+    
+    <TextView
+        android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:id="@+id/content"
+    	android:layout_alignParentBottom="true"
+    	android:textColor="@color/white"
+    	android:background="#80000000"
+    	android:singleLine="true" 
+    	android:text="222"
+    	android:visibility="gone"
+    	android:gravity="center"/>
+   
+</RelativeLayout>

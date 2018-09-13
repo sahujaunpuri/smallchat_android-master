@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F7F7"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/title_layout"
+        layout="@layout/title_layout" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fadingEdge="none"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="100dip"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/headerlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/person_header_image"
+                        android:layout_width="80dip"
+                        android:layout_height="80dip"
+                        android:contentDescription="@string/desc"
+                        android:src="@drawable/contact_default_header" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@+id/person_header_image"
+                        android:orientation="vertical" >
+                        <TextView
+                            android:id="@+id/person_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_horizontal"
+                            android:text="NICKNAME"
+                            android:textColor="@color/application_black"
+                            android:layout_marginLeft="10dp"
+                            android:textSize="@dimen/sixteen" />
+                        <TextView
+                            android:id="@+id/person_sex"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_horizontal"
+                            android:text="SEX"
+                            android:layout_below="@+id/person_name"
+                            android:textColor="@color/application_black"
+                            android:layout_marginLeft="10dp"
+                            android:textSize="@dimen/sixteen" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="80dip"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center_horizontal"
+                            android:text="地区"
+                            android:textColor="@color/application_black"
+                            android:layout_margin="5dp"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/sixteen" />
+                        <TextView
+                            android:id="@+id/person_area"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center_horizontal"
+                            android:text="地区内容"
+                            android:textColor="@color/application_black"
+                            android:layout_margin="5dp"
+                            android:textSize="@dimen/sixteen"
+                            android:textAlignment="center"
+                            />
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="80dip"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/sign"
+                            android:layout_width="80dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center_horizontal"
+                            android:text="签名"
+                            android:textColor="@color/application_black"
+                            android:layout_margin="5dp"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/sixteen" />
+                        <TextView
+                            android:id="@+id/person_sign"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center_horizontal"
+                            android:text="签名内容"
+                            android:textColor="@color/application_black"
+                            android:layout_margin="5dp"
+                            android:textSize="@dimen/sixteen"
+                            android:textAlignment="center"
+                            />
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#C2C2C2"
+                android:contentDescription="@string/desc" />
+
+            <Button
+                android:id="@+id/join_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="43dip"
+                android:layout_marginBottom="20dip"
+                android:layout_marginLeft="35dip"
+                android:layout_marginRight="35dip"
+                android:layout_marginTop="20dip"
+                android:background="@drawable/green_btn"
+                android:text="@string/add_friend"
+                android:textColor="@color/white"
+                android:textSize="@dimen/eight" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

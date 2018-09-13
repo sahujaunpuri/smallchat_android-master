@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/tab_item"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:drawablePadding="1dp"
+        android:focusable="true"
+        android:singleLine="true"
+        android:textSize="5sp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        />
+
+    <TextView
+        android:layout_width="9dp"
+        android:layout_height="9dp"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@id/tab_item"
+        android:background="@drawable/main_find_icon"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textSize="9sp"
+        android:visibility="invisible" />
+
+</RelativeLayout>

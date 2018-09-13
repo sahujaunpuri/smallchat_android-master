@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dip" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+         android:minWidth="250dip"
+        android:background="@drawable/cirle_edit_bg"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/card_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="100dip"
+            android:padding="10dip"
+            android:text="新密码已发送到你的手机上，请注意查收！"
+            android:textColor="@color/font_color"
+            android:textSize="@dimen/eight" />
+
+        <Button
+            android:id="@+id/yes"
+            android:layout_width="100dip"
+            android:layout_height="35dip"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1.0"
+            android:background="@drawable/blue_bg"
+            android:text="@string/ok"
+            android:layout_margin="10dip"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sixteen" />
+    </LinearLayout>
+
+</LinearLayout>

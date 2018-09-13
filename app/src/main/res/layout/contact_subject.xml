@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/category_linear"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/titlelayout"
+        android:layout_marginTop="@dimen/refresh_listview_margin_top"
+        android:orientation="vertical" >
+
+        <include layout="@layout/pull_to_refresh_treeview" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/titlelayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" >
+
+        <include
+            layout="@layout/title_layout"/>
+    </RelativeLayout>
+
+</RelativeLayout>

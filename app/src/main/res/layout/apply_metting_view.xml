@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/title_layout"
+        layout="@layout/title_layout" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fadingEdge="none"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/new_header_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="horizontal"
+                android:paddingBottom="5dip"
+                android:paddingLeft="17dip"
+                android:paddingRight="17dip"
+                android:paddingTop="5dip"
+                android:visibility="visible" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:minWidth="80dip"
+                    android:text="@string/metting_pic"
+                    android:textColor="@color/application_black"
+                    android:textSize="@dimen/title_button_text_size" />
+
+                <ImageView
+                    android:id="@+id/new_header_icon"
+                    style="@style/listview_header_style"
+                    android:layout_alignParentRight="true"
+                    android:contentDescription="@string/desc"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/contact_default_header" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:background="@drawable/complete_blod_splite"
+                android:contentDescription="@string/desc" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="9dip"
+                android:paddingRight="9dip"
+                android:visibility="visible" >
+
+                <RelativeLayout
+                    android:id="@+id/metting_title_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dip"
+                    android:background="@drawable/devider_line"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="horizontal"
+                    android:padding="9dip" >
+
+                    <TextView
+                        android:id="@+id/metting_title_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:minWidth="80dip"
+                        android:text="@string/metting_title"
+                        android:textColor="@color/application_black"
+                        android:textSize="@dimen/setting_text_size" />
+
+                    <TextView
+                        android:id="@+id/nickname_content"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_toRightOf="@+id/metting_title_text"
+                        android:gravity="right|center_vertical"
+                        android:hint="2-15字"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/font_color"
+                        android:textSize="@dimen/setting_text_size" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dip"
+                    android:background="@null"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/email_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:minWidth="80dip"
+                        android:text="@string/profile_email"
+                        android:textColor="@color/editor_hint_color"
+                        android:textSize="@dimen/setting_text_size" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_toRightOf="@+id/email_text"
+                        android:drawableRight="@drawable/deep_gray_arrow"
+                        android:gravity="right|center_vertical"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/font_color"
+                        android:textSize="@dimen/setting_text_size" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dip"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/company_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:minWidth="80dip"
+                        android:text="@string/compnay"
+                        android:textColor="@color/editor_hint_color"
+                        android:textSize="@dimen/setting_text_size" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_toRightOf="@+id/company_txt"
+                        android:drawableRight="@drawable/deep_gray_arrow"
+                        android:gravity="right|center_vertical"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/font_color"
+                        android:textSize="@dimen/setting_text_size" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dip"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="9dip"
+                android:paddingRight="9dip"
+                android:visibility="visible" >
+
+                <RelativeLayout
+                    android:id="@+id/start_time_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dip"
+                    android:background="@drawable/devider_line"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="horizontal"
+                    android:paddingLeft="9dip"
+                    android:paddingRight="9dip" >
+
+                    <TextView
+                        android:id="@+id/start_time_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:minWidth="80dip"
+                        android:text="@string/start_time"
+                        android:textColor="@color/application_black"
+                        android:textSize="@dimen/setting_text_size" />
+
+                    <TextView
+                        android:id="@+id/start_time_content"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_toRightOf="@+id/start_time_text"
+                        android:gravity="right|center_vertical"
+                        android:hint=""
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/font_color"
+                        android:textSize="@dimen/setting_text_size" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/end_time_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dip"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="horizontal"
+                    android:padding="9dip" >
+
+                    <TextView
+                        android:id="@+id/end_time_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:minWidth="80dip"
+                        android:text="@string/end_time"
+                        android:textColor="@color/application_black"
+                        android:textSize="@dimen/setting_text_size" />
+
+                    <TextView
+                        android:id="@+id/end_time_content"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_toRightOf="@+id/end_time_text"
+                        android:gravity="right|center_vertical"
+                        android:hint=""
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/font_color"
+                        android:textSize="@dimen/setting_text_size" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dip"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="15dip"
+                android:layout_marginTop="40dip"
+                android:text="@string/metting_topic"
+                android:textColor="@color/application_black"
+                android:textSize="@dimen/eight" />
+
+            <EditText
+                android:id="@+id/metting_topic"
+                android:layout_width="fill_parent"
+                android:layout_height="120dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dip"
+                android:background="@drawable/edit_text_bg"
+                android:gravity="left|top"
+                android:hint=""
+                android:padding="5dp"
+                android:textColor="@color/font_color"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

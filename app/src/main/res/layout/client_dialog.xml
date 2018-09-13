@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/cirle_edit_bg"
+    android:paddingBottom="10dp"
+    android:layout_margin="10dp"
+    android:orientation="vertical" >
+    
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:paddingLeft="10dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/gray_black"
+        android:id="@+id/title"
+        android:textSize="22sp" />
+    
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/language_devider_line"
+        android:visibility="invisible">
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/updatelog"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:textColor="@color/gray_black"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/okbtn"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/send_msg_btn"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+        
+        <Button
+            android:id="@+id/cancelbtn"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/profile_cancel_btn"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</LinearLayout>

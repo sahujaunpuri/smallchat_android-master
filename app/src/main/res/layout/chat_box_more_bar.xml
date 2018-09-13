@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?><!-- #CCCBC9  #EEEEEE  #D2D2D2 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ChatBoxBottomMoreBarRelativeLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#F3F3F3"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="7dp"
+        android:paddingTop="7dp"
+        android:visibility="visible"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true">
+
+        <Button
+            android:id="@+id/chat_box_more_bar_btn_delete"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="5dip"
+            android:checked="false"
+            android:textOff=""
+            android:textOn=""
+            android:background="@drawable/chat_box_more_bar_delete_btn"
+            />
+
+        <Button
+            android:id="@+id/chat_box_more_bar_btn_share"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="5dip"
+            android:layout_toRightOf="@+id/chat_box_more_bar_btn_delete"
+            android:checked="false"
+            android:textOff=""
+            android:textOn=""
+            android:background="@drawable/chat_box_more_bar_share_btn"
+            android:visibility="invisible" />
+    </RelativeLayout>
+</RelativeLayout>

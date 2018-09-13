@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<net.smallchat.im.widget.MyPullToRefreshScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollview_container"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@null"
+    android:cacheColorHint="@null"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/refresh_view"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_bar"
+        android:background="@color/transparent"
+        android:visibility="visible">
+
+        <ProgressBar
+            android:id="@+id/pull_to_refresh_progress"
+            android:layout_width="23dip"
+            android:layout_height="23dip"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15.0dip"
+            android:layout_marginLeft="30.0dip"
+            android:layout_marginRight="20.0dip"
+            android:indeterminate="true"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/pull_to_refresh_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="30.0dip"
+            android:layout_marginRight="20.0dip"
+            android:gravity="bottom"
+            android:paddingBottom="5.0dip" />
+
+        <TextView
+            android:id="@+id/pull_to_refresh_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/pull_to_refresh_time"
+            android:gravity="center"
+            android:paddingTop="10.0dip"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="#aaaead"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/scrollview_pull_to_refresh_time"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="bottom|center"
+            android:paddingBottom="10.0dip"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="#aaaead"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <net.smallchat.im.widget.LazyScrollView
+        android:id="@+id/waterfall_scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <!--
+        <LinearLayout
+            android:tid="@+tid/waterfall_container"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/page_bg"  >
+        </LinearLayout>
+        -->
+    </net.smallchat.im.widget.LazyScrollView>
+
+</net.smallchat.im.widget.MyPullToRefreshScrollView>

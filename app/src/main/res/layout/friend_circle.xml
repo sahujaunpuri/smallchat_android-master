@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/category_linear"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/title_layout"
+        android:layout_marginTop="-45dp"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <include layout="@layout/pull_to_refresh_view" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/title_layout"
+        layout="@layout/title_layout" />
+
+    <LinearLayout
+        android:id="@+id/comment_bottom_menu"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/bottom_menu"
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:background="@color/backgroud_color"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/splite"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dip"
+                android:background="@drawable/devider_line"
+                android:contentDescription="@string/desc" />
+
+            <ImageView
+                android:id="@+id/pic"
+                android:layout_width="30dip"
+                android:layout_height="30dip"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="10dip"
+                android:background="@drawable/w_brow_icon"
+                android:contentDescription="@string/desc" />
+
+            <EditText
+                android:id="@+id/edit"
+                android:layout_width="fill_parent"
+                android:layout_height="40dip"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/send"
+                android:layout_toRightOf="@+id/pic"
+                android:background="@drawable/cirle_edit_bg"
+                android:hint="@string/say_nothing"
+                android:paddingBottom="10dip"
+                android:paddingLeft="5dip"
+                android:paddingRight="5dip"
+                android:paddingTop="8dip" />
+
+            <Button
+                android:id="@+id/send"
+                android:layout_width="wrap_content"
+                android:layout_height="30dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="5dip"
+                android:background="@drawable/send_msg_btn"
+                android:text="@string/send"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+
+          <include layout="@layout/emoji_layout" />
+    </LinearLayout>
+
+</RelativeLayout>

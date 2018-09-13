@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/title_layout"
+        layout="@layout/title_layout" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none" 
+        android:padding="10dip">
+
+        <LinearLayout
+            android:id="@+id/code_all_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/edit_text_bg" 
+            android:padding="10dip">
+
+            <RelativeLayout
+                android:id="@+id/ll_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" >
+
+                <RelativeLayout
+                    android:id="@+id/userlayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <Button
+                        android:id="@+id/deletebtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/delete_session_item_btn"
+                        android:visibility="gone" />
+
+                    <RelativeLayout
+                        android:id="@+id/headerlayout"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_toRightOf="@id/deletebtn" >
+
+                        <ImageView
+                            android:id="@+id/header"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:contentDescription="@string/desc"
+                            android:src="@drawable/contact_default_header" />
+
+                        <LinearLayout
+                            android:id="@+id/group_header"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:background="@drawable/room_header_bg"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="2dp" >
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/message_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="-17dp"
+                        android:layout_toRightOf="@id/headerlayout"
+                        android:background="@drawable/message_count_bg"
+                        android:gravity="center"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:textColor="@color/white"
+                        android:visibility="gone"
+                        android:textSize="11sp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/userlayout"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/username"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:singleLine="true"
+                            android:text="ss"
+                            android:textColor="@color/chat_username_text_color"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+            <ImageView 
+                android:id="@+id/qrcode_icon"
+                android:layout_width="220dp"
+                android:layout_height="220dp"
+                android:contentDescription="@string/desc"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="fitCenter"
+                android:src="@drawable/large_qrcode"/>
+            <TextView 
+                android:id="@+id/tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/font_color"
+                android:textSize="14sp"
+                android:layout_marginTop="20dip"
+                android:layout_marginBottom="10dip"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/group_chat_scan_qrcode_join"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

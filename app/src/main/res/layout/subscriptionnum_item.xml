@@ -1,0 +1,86 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:crysecontrol="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_selector"
+    android:paddingBottom="10dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingTop="5dp" >
+
+    <RelativeLayout
+        android:id="@+id/header_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/header_icon"
+            android:layout_width="82dip"
+            android:layout_height="82dip"
+            android:contentDescription="@string/desc"
+            android:scaleType="fitXY"
+            android:src="@drawable/contact_default_header" />
+
+        <TextView
+            android:id="@+id/message_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="-17dp"
+            android:layout_toRightOf="@id/header_icon"
+            android:background="@drawable/message_count_bg"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/menu_text_size" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="85dip"
+        android:layout_toRightOf="@+id/header_layout"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/meeting_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textColor="@color/application_black"
+            android:textSize="@dimen/weibo_content_content" />
+
+        <TextView
+            android:id="@+id/metting_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textColor="@color/application_deep_gray_black"
+            android:textSize="@dimen/weibo_content_content" />
+        <TextView
+            android:id="@+id/metting_end_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textColor="@color/application_deep_gray_black"
+            android:textSize="@dimen/weibo_content_content" />
+
+        <TextView
+            android:id="@+id/join_meeting_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textColor="@color/application_deep_gray_black"
+            android:textSize="@dimen/weibo_content_content" />
+    </LinearLayout>
+
+</RelativeLayout>

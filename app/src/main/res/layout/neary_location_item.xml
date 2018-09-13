@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dip" >
+    
+
+    <RelativeLayout
+        android:id="@+id/top_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <CheckBox
+            android:id="@+id/checklocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:button="@drawable/choose_person_selected"
+            android:clickable="false"
+            android:focusable="false"
+            android:paddingLeft="5dp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/location_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/checklocation"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:singleLine="true"
+            android:textColor="@color/application_black"
+            android:textSize="16dip" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/location_addr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dip"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:singleLine="true"
+        android:visibility="gone"
+        android:textColor="@color/application_deep_gray_black"
+        android:textSize="14dip" />
+
+    <ImageView
+        android:id="@+id/splite"
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:background="@drawable/splite"
+        android:contentDescription="@string/desc" />
+
+</LinearLayout>

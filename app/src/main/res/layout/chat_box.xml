@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?><!-- #CCCBC9  #EEEEEE  #D2D2D2 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#F3F3F3"
+    android:visibility="visible">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:paddingBottom="7dp"
+        android:paddingTop="7dp"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        >
+
+        <ToggleButton
+            android:id="@+id/chat_box_btn_info"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_alignBottom="@+id/middle_layout"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="5dip"
+            android:layout_toLeftOf="@+id/middle_layout"
+            android:background="@drawable/toggle_chat_style"
+            android:checked="false"
+            android:textOff=""
+            android:textOn=""
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/middle_layout"
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="5dp"
+
+            android:orientation="horizontal"
+            android:visibility="visible">
+            <!--按住说话-->
+            <Button
+                android:id="@+id/chat_box_btn_voice"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+
+
+                android:layout_alignBottom="@+id/chat_box_edit_keyword"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/voice_message_send_btn"
+                android:paddingBottom="8dp"
+
+                android:paddingTop="8dp"
+                android:textColor="@color/voice_message_send_button_text_color"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@id/chat_box_edit_keyword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toLeftOf="@+id/right_btn_layout"
+                android:background="@drawable/message_edit_bg"
+                android:maxLines="4"
+
+                android:paddingBottom="8dp"
+                android:paddingLeft="10.0dp"
+                android:paddingRight="8.0dp"
+                android:paddingTop="8dp"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/right_btn_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/middle_layout"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@+id/middle_layout"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <ToggleButton
+                android:id="@+id/chat_box_btn_add"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_alignBottom="@+id/middle_layout"
+                android:layout_marginBottom="3dp"
+                android:layout_marginLeft="5dip"
+                android:layout_toRightOf="@+id/chat_box_btn_send"
+                android:background="@drawable/toggle_add_style"
+                android:checked="false"
+                android:textOff=""
+                android:textOn=""
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/chat_box_btn_send"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/send_msg_btn"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:text="@string/send"
+                android:textColor="@color/white"
+                android:visibility="gone" />
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

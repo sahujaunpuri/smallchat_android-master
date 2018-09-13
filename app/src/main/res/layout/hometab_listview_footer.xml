@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?> <!-- animStyle -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/app_list_corner_shape"
+    android:gravity="center_horizontal|center_vertical"
+    android:orientation="horizontal"
+    android:padding="10dip" >
+
+    <ProgressBar
+        android:id="@+id/hometab_addmore_progressbar"
+        android:layout_width="43.399994dip"
+        android:layout_height="43.399994dip"
+        android:indeterminate="false"
+        android:indeterminateDrawable="@drawable/progressbar"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/hometab_footer_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dip"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+</LinearLayout>

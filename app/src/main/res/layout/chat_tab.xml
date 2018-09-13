@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud_color"
+    android:orientation="vertical" >
+    <include 
+        layout="@layout/title_layout"
+        android:id="@+id/title_layout"
+        android:visibility="gone"/>
+    
+    <ListView
+        android:id="@+id/chats_list"
+        android:layout_below="@+id/title_layout"
+         android:layout_above="@+id/group_count"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="@null"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="true"
+        android:focusable="true"
+        android:listSelector="@drawable/transparent_selector"
+       
+        android:scrollbars="none" />
+
+    <TextView
+        android:id="@+id/group_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_vertical"
+        android:text=""
+        android:textColor="@color/application_deep_gray_black"
+        android:textSize="@dimen/eight" 
+        android:visibility="gone"/>
+
+</RelativeLayout>

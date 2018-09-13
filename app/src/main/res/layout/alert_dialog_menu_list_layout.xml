@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:paddingTop="0dp"
+	android:paddingBottom="0dp"
+	android:paddingLeft="15dip"
+	android:paddingRight="15dip">
+	<TextView
+		android:id="@+id/popup_text"
+		android:textSize="14sp"
+		android:layout_width="fill_parent"
+		android:layout_height="40dip"
+		android:gravity="center"
+		android:textColor="#007bfb"
+		android:background="@drawable/white_btn_n" />
+	
+</LinearLayout>

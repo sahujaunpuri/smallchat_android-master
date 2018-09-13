@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- btn_style_alert_dialog_background -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:background="#cccccc"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/user_detail_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dip"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:id="@+id/header_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:orientation="vertical" >
+
+            <net.smallchat.im.widget.RoundImageView
+                android:id="@+id/header_icon"
+                style="@style/listview_header_style"
+                android:contentDescription="@string/desc"
+                android:src="@drawable/contact_default_header" >
+            </net.smallchat.im.widget.RoundImageView>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignBottom="@+id/header_layout"
+            android:layout_alignTop="@+id/header_layout"
+            android:layout_marginLeft="5dip"
+            android:layout_toRightOf="@+id/header_layout"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="150dip"
+                android:singleLine="true"
+                android:layout_centerVertical="true"
+                android:text=""
+                android:textColor="@color/gray_black"
+                android:textSize="14sp" />
+
+          
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/content_edit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5.0dip"
+        android:background="@null"
+        android:gravity="top"
+        android:text=""
+        android:padding="5dip"
+        android:textColor="@color/gray_black"
+        android:textSize="@dimen/chat_user_name_text_size" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:background="#cccccc"
+        android:orientation="horizontal"
+        android:padding="10dip" >
+
+        <TextView
+            android:id="@+id/ok_text"
+            android:layout_width="fill_parent"
+            android:layout_height="40dip"
+            android:layout_marginLeft="20dip"
+            android:layout_marginRight="20dip"
+            android:layout_weight="1"
+            android:background="@drawable/blue_bg"
+            android:gravity="center"
+            android:text="接受"
+            android:textColor="@color/black"
+            android:textSize="18dip" />
+
+        <TextView
+            android:id="@+id/cancle_text"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dip"
+            android:layout_marginRight="20dip"
+            android:layout_weight="1"
+            android:background="@drawable/blue_bg"
+            android:gravity="center"
+            android:text="拒接"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="send_one_msg">发来1条消息</string>
+    <string name="contact_count">个联系人</string>
+    <string name="send_in">发来</string>
+    <string name="msg_count_tip">条消息</string>
+</resources>

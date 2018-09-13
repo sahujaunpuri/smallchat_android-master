@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/title_layout"
+        layout="@layout/title_layout" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fadingEdge="none"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:paddingBottom="40dip"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/new_header_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="45dip"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingBottom="5dip"
+                android:paddingLeft="17dip"
+                android:paddingRight="17dip"
+                android:paddingTop="5dip"
+                android:visibility="visible" >
+
+                <TextView
+                    android:id="@+id/met_name_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:minWidth="80dip"
+                    android:text="@string/metting_name"
+                    android:textColor="@color/application_black"
+                    android:textSize="@dimen/title_button_text_size" />
+
+                <TextView
+                    android:id="@+id/met_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_toRightOf="@+id/met_name_text"
+                    android:gravity="right|center_vertical"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/font_color"
+                    android:textSize="@dimen/setting_text_size" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:background="@drawable/complete_blod_splite"
+                android:contentDescription="@string/desc" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="9dip"
+                android:paddingRight="9dip"
+                android:visibility="visible" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dip"
+                    android:background="@drawable/devider_line"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="horizontal"
+                    android:padding="9dip" >
+
+                    <TextView
+                        android:id="@+id/metting_host_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:minWidth="80dip"
+                        android:text="@string/host_metting"
+                        android:textColor="@color/application_black"
+                        android:textSize="@dimen/setting_text_size" />
+
+                    <TextView
+                        android:id="@+id/host_metting"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_toRightOf="@+id/metting_host_text"
+                        android:gravity="right|center_vertical"
+                        android:hint=""
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/font_color"
+                        android:textSize="@dimen/setting_text_size" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dip"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/company_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:minWidth="80dip"
+                        android:text="@string/compnay"
+                        android:textColor="@color/editor_hint_color"
+                        android:textSize="@dimen/setting_text_size" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_toRightOf="@+id/company_txt"
+                        android:drawableRight="@drawable/deep_gray_arrow"
+                        android:gravity="right|center_vertical"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/font_color"
+                        android:textSize="@dimen/setting_text_size" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dip"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="9dip"
+                android:paddingRight="9dip"
+                android:visibility="visible" >
+
+                <RelativeLayout
+                    android:id="@+id/start_time_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dip"
+                    android:background="@drawable/devider_line"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="horizontal"
+                    android:paddingLeft="9dip"
+                    android:paddingRight="9dip" >
+
+                    <TextView
+                        android:id="@+id/start_time_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:minWidth="80dip"
+                        android:text="@string/start_time"
+                        android:textColor="@color/application_black"
+                        android:textSize="@dimen/setting_text_size" />
+
+                    <TextView
+                        android:id="@+id/start_time_content"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_toRightOf="@+id/start_time_text"
+                        android:gravity="right|center_vertical"
+                        android:hint=""
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/font_color"
+                        android:textSize="@dimen/setting_text_size" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/end_time_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dip"
+                    android:orientation="horizontal"
+                    android:paddingLeft="9dip"
+                    android:paddingRight="9dip" >
+
+                    <TextView
+                        android:id="@+id/end_time_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:minWidth="80dip"
+                        android:text="@string/end_time"
+                        android:textColor="@color/application_black"
+                        android:textSize="@dimen/setting_text_size" />
+
+                    <TextView
+                        android:id="@+id/end_time_content"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_toRightOf="@+id/end_time_text"
+                        android:gravity="right|center_vertical"
+                        android:hint=""
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/font_color"
+                        android:textSize="@dimen/setting_text_size" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dip"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="15dip"
+                android:layout_marginTop="35dip"
+                android:text="@string/metting_topic"
+                android:textColor="@color/application_black"
+                android:textSize="@dimen/eight" />
+
+            <TextView
+                android:id="@+id/met_topic"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="10dip"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="15dip"
+                android:gravity="left"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/font_color"
+                android:textSize="@dimen/setting_text_size" />
+
+            <RelativeLayout
+                android:id="@+id/join_met_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="43dip"
+                android:layout_marginLeft="25dip"
+                android:layout_marginRight="25dip"
+                android:layout_marginTop="15dip"
+                android:visibility="gone"
+                android:background="@drawable/invite_friends_btn" >
+
+                <TextView
+                    android:id="@+id/join_met_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/join_met"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/eight" />
+
+                <TextView
+                    android:id="@+id/message_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_toEndOf="@+id/join_met_text"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/message_count_bg"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/menu_text_size"
+                    android:visibility="visible" />
+                <!-- </LinearLayout> -->
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/valid_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="43dip"
+                android:layout_marginLeft="25dip"
+                android:layout_marginRight="25dip"
+                android:layout_marginTop="20dip"
+                android:background="@drawable/invite_friends_btn"
+                android:text="@string/valic_met"
+                android:textColor="@color/application_black"
+                android:textSize="@dimen/eight"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/manager_met_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="43dip"
+                android:layout_marginLeft="25dip"
+                android:layout_marginRight="25dip"
+                android:layout_marginTop="20dip"
+                android:background="@drawable/red_btn"
+                android:text="@string/manager_met"
+                android:textColor="@color/white"
+                android:textSize="@dimen/eight"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

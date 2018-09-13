@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e1e0de"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/titlelayout"
+        layout="@layout/title_layout" />
+
+    <ListView
+        android:id="@+id/contact_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/titlelayout"
+        android:cacheColorHint="@null"
+        android:divider="@drawable/order_devider_line"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="true"
+        android:focusable="true"
+        android:listSelector="@drawable/list_selector"
+        android:scrollbars="none" />
+
+</RelativeLayout>

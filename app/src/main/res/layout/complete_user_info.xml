@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        layout="@layout/title_layout" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="10dip"
+        android:fadingEdge="none"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/new_header_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="horizontal"
+                android:paddingTop="5dip"
+                android:paddingBottom="5dip"
+                android:paddingLeft="17dip"
+                android:paddingRight="17dip"
+                android:visibility="visible" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:minWidth="80dip"
+                    android:text="@string/head"
+                    android:textColor="@color/text_title_color"
+                    android:textSize="@dimen/title_button_text_size" />
+
+                <ImageView
+                    android:id="@+id/new_header_icon"
+                    style="@style/listview_header_style"
+                    android:layout_alignParentRight="true"
+                    android:contentDescription="@string/desc"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/contact_default_header" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:background="@drawable/complete_blod_splite"
+                android:contentDescription="@string/desc" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingLeft="9dip"
+                android:paddingRight="9dip"
+                android:orientation="vertical"
+                android:visibility="visible" >
+
+                <RelativeLayout
+                    android:id="@+id/nickname_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dip"
+                     android:background="@drawable/devider_line"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="horizontal"
+                    android:padding="9dip" >
+
+                    <TextView
+                        android:id="@+id/nickname_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:minWidth="80dip"
+                        android:text="@string/nickname"
+                        android:textColor="@color/text_title_color"
+                        android:textSize="@dimen/setting_text_size" />
+
+                    <TextView
+                        android:id="@+id/nickname_content"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_toRightOf="@+id/nickname_text"
+                        android:drawableRight="@drawable/deep_gray_arrow"
+                        android:gravity="right|center_vertical"
+                        android:hint="必填 "
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/font_color"
+                        android:textSize="@dimen/setting_text_size" />
+                </RelativeLayout>
+
+           
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dip"
+                android:background="@color/white"
+                android:paddingLeft="9dip"
+                android:paddingRight="9dip"
+                android:orientation="vertical"
+                android:visibility="visible" >
+
+                <RelativeLayout
+                    android:id="@+id/sex_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dip"
+                    android:clickable="true"
+                      android:background="@drawable/devider_line"
+                    android:focusable="true"
+                    android:orientation="horizontal"
+                    android:paddingLeft="9dip"
+                    android:paddingRight="9dip" >
+
+                    <TextView
+                        android:id="@+id/sex_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:minWidth="80dip"
+                        android:text="@string/sex"
+                        android:textColor="@color/text_title_color"
+                        android:textSize="@dimen/setting_text_size" />
+
+                    <TextView
+                        android:id="@+id/sex_content"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_toRightOf="@+id/sex_text"
+                        android:drawableRight="@drawable/deep_gray_arrow"
+                        android:gravity="right|center_vertical"
+                        android:hint="选填 "
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/font_color"
+                        android:textSize="@dimen/setting_text_size" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/addr_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dip"
+                    android:background="@drawable/devider_line"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="horizontal"
+                    android:padding="9dip" >
+
+                    <TextView
+                        android:id="@+id/addr_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:minWidth="80dip"
+                        android:text="@string/addr"
+                        android:textColor="@color/text_title_color"
+                        android:textSize="@dimen/setting_text_size" />
+
+                    <TextView
+                        android:id="@+id/addr_content"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_toRightOf="@+id/addr_text"
+                        android:drawableRight="@drawable/deep_gray_arrow"
+                        android:gravity="right|center_vertical"
+                        android:hint="选填 "
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/font_color"
+                        android:textSize="@dimen/setting_text_size" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/sign_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dip"
+                    android:background="@null"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="horizontal"
+                    android:padding="9dip" >
+
+                    <TextView
+                        android:id="@+id/sign_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:minWidth="80dip"
+                        android:text="@string/user_sign"
+                        android:textColor="@color/text_title_color"
+                        android:textSize="@dimen/setting_text_size" />
+
+                    <TextView
+                        android:id="@+id/sign_content"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_toRightOf="@+id/sign_text"
+                        android:drawableRight="@drawable/deep_gray_arrow"
+                        android:gravity="center_vertical|right"
+                        android:hint="选填 "
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/font_color"
+                        android:textSize="@dimen/setting_text_size" />
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<net.smallchat.im.widget.MyPullToRefreshTreeView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@null"
+    android:cacheColorHint="@null"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/refresh_view"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_bar"
+        android:background="@color/transparent"
+        android:paddingLeft="30dp" >
+
+        <ProgressBar
+            android:id="@+id/pull_to_refresh_progress"
+            android:layout_width="43.399994dip"
+            android:layout_height="43.399994dip"
+            android:layout_alignParentBottom="true"
+            android:indeterminate="false"
+            android:indeterminateDrawable="@drawable/progressbar"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/pull_to_refresh_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="bottom"
+            android:paddingBottom="5.0dip"
+            android:scaleType="centerInside" />
+
+        <TextView
+            android:id="@+id/pull_to_refresh_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/pull_to_refresh_time"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:paddingTop="10.0dip"
+            android:textColor="#a5a6ab"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/pull_to_refresh_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="bottom|center"
+            android:textColor="#a5a6ab"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <net.smallchat.im.components.treeview.TreeView
+        android:id="@+id/service_treeview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="10dip"
+        android:horizontalSpacing="0dip"
+        android:listSelector="@color/transparent"
+        android:numColumns="3"
+        android:scrollbars="none"
+        android:verticalSpacing="20dip" />
+</net.smallchat.im.widget.MyPullToRefreshTreeView>

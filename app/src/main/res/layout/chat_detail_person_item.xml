@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:duplicateParentState="true"
+    android:orientation="vertical" >
+    
+    <RelativeLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:duplicateParentState="true">
+        
+        <ImageView 
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/header"
+            android:duplicateParentState="true"
+            android:contentDescription="@string/desc"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/contact_default_header"/>
+        
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignLeft="@id/header"
+            android:background="@drawable/delete_session_item_btn"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:focusable="false"
+            android:id="@+id/deletebtn" />
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:id="@+id/username"
+            android:singleLine="true"
+            android:layout_below="@id/header"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="3dp"/>
+    </RelativeLayout>
+
+</LinearLayout>

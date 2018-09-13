@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:crysecontrol="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/img_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/cover_album_height"
+        android:contentDescription="@string/desc"
+        android:scaleType="centerCrop"
+        android:src="@drawable/head_img" />
+
+    <TextView
+        android:id="@+id/set_cover_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/set_friends_cover_hint"
+        android:layout_centerInParent="true"
+        android:textColor="@color/white"
+        android:layout_marginBottom="20dip"
+        android:textSize="@dimen/sixteen"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="74dp"
+        android:layout_below="@id/img_bg"
+        android:layout_marginTop="-50dip"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/my_header_layout"
+            android:layout_width="80dip"
+            android:layout_height="80dip"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dip" >
+
+            <net.smallchat.im.widget.RoundImageView
+                android:id="@+id/header_icon"
+                android:layout_width="70dip"
+                android:layout_height="71dip"
+                android:layout_marginLeft="2dip"
+                android:contentDescription="@string/desc"
+                android:scaleType="fitXY"
+                android:src="@drawable/contact_default_header" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/login_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="10dip"
+            android:layout_toLeftOf="@+id/my_header_layout"
+            android:maxWidth="150dip"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/login_user_name"
+            android:layout_marginRight="5dip"
+            android:layout_toLeftOf="@+id/my_header_layout"
+            android:maxWidth="150dip"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="14dip"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/sign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/img_bg"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="20dip"
+        android:layout_marginLeft="20dip"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:gravity="right"
+        android:text=""
+        android:textColor="#686868"
+        android:textSize="16sp" />
+
+</RelativeLayout>

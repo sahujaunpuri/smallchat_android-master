@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!--
+    <RelativeLayout
+        android:tid="@+tid/titlelayout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_bar"
+        android:background="@drawable/title_bar" >
+
+        <Button
+            android:tid="@+tid/backbtn"
+            style="@style/back_btn_style" />
+
+        <TextView
+            android:tid="@+tid/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+            android:textSize="@dimen/title_text_size" />
+
+        <Button
+            android:tid="@+tid/saveBtn"
+            style="@style/operate_btn_style" />
+    </RelativeLayout>
+    -->
+
+    <include
+        android:id="@+id/title_layout"
+        layout="@layout/title_layout" />
+
+
+    <net.smallchat.im.components.sortlist.ClearEditText
+        android:id="@+id/markname"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/cirle_edit_bg"
+        android:ems="10"
+        android:gravity="center_vertical"
+        android:hint=""
+        android:maxLines="2"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:singleLine="true"
+        android:textColor="@color/editor_text_color"
+        android:textColorHint="@color/editor_text_color"
+        android:textSize="14sp" />
+
+    <RadioGroup
+        android:id="@+id/sex_group"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <RadioButton
+            android:id="@+id/manl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:checked="true"
+            android:text="男"
+            android:textColor="@color/font_color" />
+
+        <RadioButton
+            android:id="@+id/femanl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="女"
+            android:textColor="@color/font_color" />
+
+        <RadioButton
+            android:id="@+id/center_sex"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="不限"
+            android:textColor="@color/font_color" />
+    </RadioGroup>
+
+</LinearLayout>

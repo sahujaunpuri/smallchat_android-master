@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/backgroud_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/grouplayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible" >
+
+        <TextView
+            android:id="@+id/sortKey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dp"
+            android:paddingTop="15dip"
+            android:text=""
+            android:textColor="@color/application_deep_gray_black"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:contentDescription="@string/desc"
+            android:src="@drawable/contact_item_arrow"
+            android:visibility="gone" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_below="@+id/sortKey"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/complete_small_splite"
+            android:contentDescription="@string/desc" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/user_detail_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp" >
+
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <CheckBox
+                android:id="@+id/checkperson"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dip"
+                android:button="@drawable/choose_person_selected"
+                android:checked="false"
+                android:clickable="false"
+                android:focusable="false"
+                android:paddingLeft="5dp"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/headerlayout"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="7dp"
+                android:layout_toRightOf="@id/checkperson" >
+
+                <ImageView
+                    android:id="@+id/headerimage"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:contentDescription="@string/desc"
+                    android:layout_marginLeft="3dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/contact_default_header" />
+
+                <LinearLayout
+                    android:id="@+id/group_header"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/room_header_bg"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="2dp"
+                    android:visibility="gone" >
+                </LinearLayout>
+            </RelativeLayout>
+            
+        <TextView
+            android:id="@+id/new_notify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="15dip"
+            android:layout_marginLeft="-17dp"
+            android:layout_toRightOf="@id/headerlayout"
+            android:background="@drawable/message_count_bg"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+            
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/header"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text=""
+                    android:textColor="@color/application_black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/releasetime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/chat_time_text_size" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/prompt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/application_deep_gray_black"
+                android:textSize="14sp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/content_splite"
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_marginLeft="10dip"
+        android:background="@drawable/splite"
+        android:contentDescription="@string/desc"
+        android:visibility="visible" />
+
+</LinearLayout>

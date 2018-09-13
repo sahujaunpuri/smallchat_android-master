@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dip">
+
+    <ImageView
+        android:id="@+id/user_icon"
+        android:layout_width="25dip"
+        android:layout_height="25dip"
+        android:layout_marginRight="5dip"
+        android:contentDescription="@string/desc"
+        android:src="@drawable/contact_default_header" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/user_icon"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxWidth="150dip"
+                android:singleLine="true"
+                android:text="d"
+                android:layout_toLeftOf="@+id/time"
+                android:textColor="@color/application_friend_circle_user_name"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/application_gray_black"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxWidth="250dip"
+            android:singleLine="true"
+            android:text="大幅度"
+            android:textColor="@color/application_black"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+</RelativeLayout>

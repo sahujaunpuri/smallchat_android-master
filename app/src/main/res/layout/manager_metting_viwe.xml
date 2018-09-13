@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/title_layout"
+        layout="@layout/title_layout" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/title_layout"
+        android:layout_marginTop="140dip"
+        android:layout_marginLeft="25dip"
+        android:layout_marginRight="25dip"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/check_apply_met"
+            android:layout_width="fill_parent"
+            android:layout_height="43dip"
+            android:background="@drawable/invite_friends_btn"
+            android:text="@string/check_apply_met"
+            android:textColor="@color/application_black"
+            android:textSize="@dimen/eight" />
+
+        <Button
+            android:id="@+id/join_met_user"
+            android:layout_width="fill_parent"
+            android:layout_height="43dip"
+            android:layout_marginTop="20dip"
+            android:background="@drawable/red_btn"
+            android:text="@string/user_top"
+            android:textColor="@color/white"
+            android:textSize="@dimen/eight" />
+    </LinearLayout>
+
+</RelativeLayout>
